@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Community Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ede7f6, #e0f7fa);
+      color: #333;
+    }
+
+    nav {
+      background-color: #4b0082;
+      padding: 1.2em;
+      text-align: center;
+    }
+
+    nav a {
+      background: #9377e7;
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      padding: 12px 28px;
+      border-radius: 50px 10px;
+      border: 2px solid #b2dfdb;
+      font-weight: bold;
+      display: inline-block;
+      transition: all 0.4s ease;
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    nav a:hover {
+      background-color: #3a7070;
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    main {
+      padding: 2em;
+    }
+
+    .contact-section {
+      position: relative;
+      background-image: url('https://img.freepik.com/free-photo/3d-portrait-people_23-2150794025.jpg?semt=ais_hybrid&w=740'); /* Use your own local image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 100px 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .contact-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.55); /* Dark overlay for readability */
+      z-index: 0;
+    }
+
+    .contact-section * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-section h2 {
+      font-size: 2.5em;
+      color: #ffe4ff;
+      margin-bottom: 20px;
+    }
+
+    .contact-section p {
+      font-size: 1.2em;
+    }
+
+    .contact-section a {
+      color: #ffccff;
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 1.2em;
+    }
+
+    .contact-section a:hover {
+      color: #ffd700;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #6a1b9a;
+      color: white;
+      padding: 1em;
+      margin-top: 3em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+    <a href="help.html" target="_blank">Help</a>
+  </nav>
+
+  <!-- Main Contact Section -->
+  <main>
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>If you have questions or need support, email us at:</p>
+      <p>
+        <a href="mailto:community@local.org">community@local.org</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Local Community Portal</p>
+  </footer>
+</body>
+</html>

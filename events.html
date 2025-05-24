@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Events | Community Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ede7f6, #e0f7fa);
+      color: #333;
+    }
+
+    nav {
+      background-color: #4b0082;
+      padding: 1.2em;
+      text-align: center;
+    }
+
+    nav a {
+      background: #b6a2e4;
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      padding: 12px 28px;
+      border-radius: 50px 10px;
+      border: 2px solid #b2dfdb;
+      font-weight: bold;
+      display: inline-block;
+      transition: all 0.4s ease;
+      box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    nav a:hover {
+      background-color: #4a3b7d;
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    main {
+      padding: 2em;
+    }
+
+    h2.highlight {
+      text-align: center;
+      font-size: 2em;
+      color: #6a1b9a;
+      margin-bottom: 1.5em;
+    }
+
+    .gallery {
+      width: 100%;
+      margin-bottom: 3em;
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: 150px;
+      border-radius: 12px;
+      box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+      margin: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 2em;
+      background: #f3e5f5;
+      border-radius: 25px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      border: 3px double #7c4dff;
+      transition: transform 0.3s ease;
+    }
+
+    form:hover {
+      transform: scale(1.01);
+    }
+
+    form h3 {
+      text-align: center;
+      color: #4a148c;
+      margin-bottom: 1em;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 12px;
+      border: 2px solid #ce93d8;
+      outline: none;
+      transition: all 0.3s ease;
+      font-size: 1em;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #7b1fa2;
+      box-shadow: 0 0 8px #ab47bc;
+    }
+
+    button {
+      background: #6a1b9a;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 40px;
+      font-size: 1em;
+      margin-top: 15px;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.3s ease;
+      box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background: #4a0072;
+      transform: scale(1.05);
+    }
+
+    #charCount {
+      font-size: 0.9em;
+      color: #5e35b1;
+    }
+
+    output {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+      color: green;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #6a1b9a;
+      color: white;
+      padding: 1em;
+      margin-top: 3em;
+    }
+  </style>
+  <script>
+    function showConfirmation(event) {
+      event.preventDefault();
+      document.getElementById("confirmation").textContent = "Thank you for registering!";
+    }
+
+    function validatePhone(input) {
+      const pattern = /^[0-9]{10}$/;
+      if (!pattern.test(input.value)) {
+        alert("Please enter a valid 10-digit phone number.");
+        input.focus();
+      }
+    }
+
+    function countChars(textarea) {
+      document.getElementById("charCount").textContent =
+        "Characters: " + textarea.value.length;
+    }
+
+    function displayFee(select) {
+      if (select.value) {
+        alert("Selected event fee: " + select.options[select.selectedIndex].text.split('-')[1].trim());
+      }
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+    <a href="help.html" target="_blank">Help</a>
+  </nav>
+
+  <main>
+    <section id="events">
+      <h2 class="highlight">Upcoming Events</h2>
+
+      <table class="gallery">
+        <caption><strong>Past Community Events</strong></caption>
+        <tr>
+          <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR67O0_TJjUeK69gtVGhDGD-P1VW3Di2800_w&s" alt="Event 1" title="Community Fair" /></td>
+          <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9GCn_MjPhVHVkcdrJ6bDL1d6eq6qFnJI9NA&s" alt="Event 2" title="Neighborhood Meetup" /></td>
+          <td><img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeGQkYjn3HKxck_6zDmiiWwbjr0xC7sYajZQ&s" alt="Event 3" title="Cultural Night" /></td>
+        </tr>
+        <tr>
+          <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh4wJTz2Nogvl5aJZm20mrnsHDD_-HC3NFeA&s" alt="Event 4" title="Sports Day" /></td>
+          <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnqpFeMe9HOhaEx5VU4jjdVeLpX1N_xJtAL3bAKgWan07kUdkrsLxgqQShsWFrlzfN_Nk&usqp=CAU" alt="Event 5" title="Music Fest" /></td>
+          <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA2qXoAmNBIDBAxkmTfhIuLqgQMEExOBkzXQ&s" alt="Event 6" title="Food Festival" /></td>
+        </tr>
+      </table>
+
+      <form onsubmit="showConfirmation(event)">
+        <h3>Event Registration</h3>
+        <label>Name:</label>
+        <input type="text" name="name" required placeholder="Enter your name" autofocus />
+
+        <label>Email:</label>
+        <input type="email" name="email" required placeholder="Enter your email" />
+
+        <label>Date:</label>
+        <input type="date" name="date" required />
+
+        <label>Event Type:</label>
+        <select onchange="displayFee(this)">
+          <option value="">Select</option>
+          <option value="Music">Music - $10</option>
+          <option value="Food">Food - $5</option>
+          <option value="Sports">Sports - $8</option>
+        </select>
+
+        <label>Phone:</label>
+        <input type="text" id="phone" onblur="validatePhone(this)" placeholder="Enter 10-digit phone number" />
+
+        <label>Message:</label>
+        <textarea id="feedback" onkeyup="countChars(this)" placeholder="Enter message (optional)"></textarea>
+        <span id="charCount">Characters: 0</span>
+
+        <button type="submit">Submit</button>
+        <output id="confirmation"></output>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Local Community Portal</p>
+  </footer>
+</body>
+</html>
